@@ -1,69 +1,34 @@
-# React + TypeScript + Vite
+# 🌟 Material UI Showcase
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple demo showcasing core Material UI components in **React** **TypeScript** — bundled with **Vite**.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Check out the live demo here: [https://martinmqz.github.io/material-ui-showcase](https://martinmqz.github.io/material-ui-showcase?github)
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🧩 UI Components Used
+This demo leverages a wide array of Material UI components for layout, form, and theming:
+- **Buttons & Icons**: `Button`, `IconButton`, `MenuIcon`, `Brightness4Icon`, `Brightness7Icon`, `Add`, `Favorite`, `Edit`, `AccountCircle`, `Chip`, `ToggleButton`, `Fab`
+- **Forms & Inputs**: `TextField`, `Checkbox`, `Radio`, `RadioGroup`, `Switch`, `Slider`, `Select`, `MenuItem`, `InputLabel`, `FormControl`, `FormLabel`, `FormControlLabel`
+- **Layout & Structure**: `Container`, `Box`, `Paper`, `Typography`, `AppBar`, `Toolbar`, `Box`, `Paper`, `Divider`, `Card`, `CardContent`, `Alert`, `LinearProgress`, `Avatar`, `Rating`, `Tooltip`
+ 
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠️ Tech Stack
+| Tool                  | Purpose                          |
+|-----------------------|----------------------------------|
+| **React - TypeScript**| UI framework                     |
+| **Zustand**           | State management                 |
+| **React-router**      | Page routing                          |
+| **MUI (Material UI)** | Accessible component library     |
+| **Vite**              | Fast dev server + bundling       |
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 🚀 Getting Started
+To run this project locally:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+```bash
+# Install dependencies
+npm install
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+# Start the development server
+npm run dev

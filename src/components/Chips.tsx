@@ -20,7 +20,7 @@ export default function Chips() {
       <CodeBlock
         title="Chips Example"
         code={`import { Chip } from "@mui/material";
-    
+
     <Chip label="Basic" />
     <Chip label="Clickable" onClick={() => {}} />
     <Chip label="Deletable" onDelete={() => {}} />

@@ -22,15 +22,15 @@ export default function CodeBlock({ code, title }: CodeBlockProps) {
 
   return (
     <>
-      <Card sx={{ bgcolor: 'grey.50'}}>
+      <Card style={{ backgroundColor: 'rgba(0, 0, 0, 0.06)'}}>
         <CardContent sx={{ p:0 }}>
           <div style={{display:'flex', alignItems: 'center', justifyContent:'space-between', padding: '16px', borderBottom:'1px solid #e0e0e0'}}>
-            <Typography variant="subtitle2" color="text.secondary">{title}</Typography>
+            <Typography variant="subtitle2" color="text.primary">{title}</Typography>
             <IconButton size="small" onClick={copyToClipboard} color={copied ? 'primary' : 'default'}>
               {copied ? <Check /> : <ContentCopy />}
             </IconButton>
           </div>
-          <pre style={{ textAlign:'left', padding: '16px', margin:0, overflowX:'auto', fontSize: '14px', backgroundColor: '#f5f5f5',  fontFamily: 'monospace'}}>
+          <pre style={{ textAlign:'left', padding: '16px', margin:0, overflowX:'auto', fontSize: '14px', fontFamily: 'monospace'}}>
             <code>{code}</code>
           </pre>
         </CardContent>

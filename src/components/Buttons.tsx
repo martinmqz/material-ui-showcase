@@ -26,6 +26,7 @@ export default function Buttons() {
       <CodeBlock
         title="Buttons Example"
         code={`import { Button } from "@mui/material";
+
 <Button variant="contained">Contained</Button>
 <Button variant="outlined">Outlined</Button>
 <Button variant="text">Text</Button>

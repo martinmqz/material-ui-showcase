@@ -1,6 +1,6 @@
 {
   "name": "material-ui-showcase",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Showcasing practical use of Material UI components",
   "keywords": [
     "mui",
@@ -35,7 +35,8 @@
     "@tanstack/react-query": "^5.83.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-router-dom": "^7.7.1"
+    "react-router-dom": "^7.7.1",
+    "zustand": "^5.0.6"
   },
   "devDependencies": {
     "@eslint/js": "^9.30.1",

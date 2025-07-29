@@ -1,15 +1,23 @@
-import { AppBar, IconButton, Toolbar, Tooltip, Typography, useTheme } from "@mui/material";
-import { Menu as MenuIcon, AccountCircle, Brightness4, Brightness7 } from "@mui/icons-material";
-import { useState } from "react";
+import {
+  AppBar,
+  IconButton,
+  Toolbar,
+  Tooltip,
+  Typography,
+} from "@mui/material";
+import {
+  Menu as MenuIcon,
+  AccountCircle,
+  Brightness4,
+  Brightness7,
+} from "@mui/icons-material";
 
-export default function NavBar () {
-  const [darkMode, setDarkMode] = useState(false);
-  const theme = useTheme();
-  const toggleTheme = () => {
-    setDarkMode(!darkMode);
-    theme.palette.mode = darkMode ? "light" : "dark";
-  };
+import useZStore from "../store/zstore";
 
+export default function NavBar() {
+  const darkMode = useZStore(state => state.theme.palette.mode === 'dark');
+  const toggleTheme = useZStore(state => state.toggleTheme)
+  
   return (
     <AppBar position="static" sx={{ mb: 4 }}>
       <Toolbar>
@@ -29,5 +37,5 @@ export default function NavBar () {
         </IconButton>
       </Toolbar>
     </AppBar>
-  )
+  );
 }
