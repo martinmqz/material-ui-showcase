@@ -26,7 +26,6 @@ export default function Cards() {
       <CodeBlock
         title="Cards Example"
         code={`import { Card, CardContent, Typography } from "@mui/material";
-
 <Card sx={{ maxWidth: 345 }}>
   <CardContent>
     <Typography gutterBottom variant="h5" component="div">

@@ -3,8 +3,8 @@ import { ContentCopy, Check } from "@mui/icons-material";
 import { useState } from "react";
 
 interface CodeBlockProps {
-  code: string
-  title: string
+  readonly code: string
+  readonly title: string
 }
 
 export default function CodeBlock({ code, title }: CodeBlockProps) {
@@ -30,7 +30,7 @@ export default function CodeBlock({ code, title }: CodeBlockProps) {
               {copied ? <Check /> : <ContentCopy />}
             </IconButton>
           </div>
-          <pre style={{padding: '16px', margin:0, overflowX:'auto', fontSize: '14px', backgroundColor: '#f5f5f5',  fontFamily: 'monospace'}}>
+          <pre style={{ textAlign:'left', padding: '16px', margin:0, overflowX:'auto', fontSize: '14px', backgroundColor: '#f5f5f5',  fontFamily: 'monospace'}}>
             <code>{code}</code>
           </pre>
         </CardContent>
