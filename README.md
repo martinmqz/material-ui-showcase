@@ -1,41 +1,69 @@
-# 🌟 Material UI Showcase
+# React + TypeScript + Vite
 
-A simple demo showcasing core Material UI components with **Framer Motion** animations and **TailwindCSS** — bundled with **Vite**.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## 🚀 Live Demo
+Currently, two official plugins are available:
 
-Check out the live demo here: [https://martinmqz.github.io/material-ui-showcase](https://martinmqz.github.io/material-ui-showcase?github)
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## ✨ Features
+## Expanding the ESLint configuration
 
-- ✅ MUI components (Buttons, Inputs, Form controls)
-- 🎯 Framer Motion animations for smooth transitions
-- 🎨 TailwindCSS for utility-first styling
-- 🚀 Built with Vite for lightning-fast bundling
-- 🔍 Form validation and minimal accessibility setup
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-## 🧩 UI Components Used
-This demo leverages a wide array of Material UI components for layout, form handling, accessibility, and theming:
+```js
+export default tseslint.config([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
 
-- **Forms & Inputs**: `TextField`, `Checkbox`, `Radio`, `RadioGroup`, `Switch`, `Slider`, `Select`, `MenuItem`, `InputLabel`, `FormControl`, `FormLabel`, `FormControlLabel`
-- **Buttons & Icons**: `Button`, `IconButton`, `MenuIcon`, `Brightness4Icon`, `Brightness7Icon`
-- **Layout & Structure**: `Container`, `Box`, `Paper`, `Typography`, `
+      // Remove tseslint.configs.recommended and replace with this
+      ...tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      ...tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      ...tseslint.configs.stylisticTypeChecked,
 
-## 🛠️ Tech Stack
-| Tool            | Purpose                          |
-|-----------------|----------------------------------|
-| **React.js**     | UI framework                     |
-| Vite            | Fast dev server + bundling       |
-| MUI (Material UI) | Accessible component library     |
-| TailwindCSS     | Utility-based styling            |
-| Framer Motion   | Declarative animations           |
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```
 
-## 🚀 Getting Started
-To run this project locally:
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```bash
-# Install dependencies
-npm install
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
 
-# Start the development server
-npm run dev
+export default tseslint.config([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```
