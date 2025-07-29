@@ -15,7 +15,7 @@ import Footers from "../components/Footers";
 
 export default function ComponentDemo() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div>
       {/* Material UI App Bar */}
       <NavBar />
 
