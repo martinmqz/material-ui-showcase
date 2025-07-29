@@ -34,11 +34,8 @@ This demo leverages a wide array of Material UI components for layout, form hand
 To run this project locally:
 
 ```bash
-# 1. Clone the repository
-git clone https://github.com/martinmqz/material-ui-components.git
-
-# 2. Install dependencies
+# Install dependencies
 npm install
 
-# 3. Start the development server
+# Start the development server
 npm run dev
