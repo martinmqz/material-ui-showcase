@@ -2,6 +2,10 @@
 
 A simple demo showcasing core Material UI components with **Framer Motion** animations and **TailwindCSS** — bundled with **Vite**.
 
+## 🚀 Live Demo
+
+Check out the live demo here: [https://martinmqz.github.io/material-ui-showcase](https://martinmqz.github.io/material-ui-showcase?github)
+
 ## ✨ Features
 
 - ✅ MUI components (Buttons, Inputs, Form controls)
