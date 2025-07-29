@@ -1,6 +1,6 @@
 {
-  "name": "material-ui-components",
-  "version": "1.0.0",
+  "name": "material-ui-showcase",
+  "version": "2.0.0",
   "description": "Showcasing practical use of Material UI components",
   "keywords": [
     "mui",
@@ -9,22 +9,22 @@
     "react",
     "components"
   ],
-  "homepage": "https://github.com/martinmqz/material-ui-components#readme",
+  "homepage": "https://github.com/martinmqz/material-ui-showcase#readme",
   "bugs": {
-    "url": "https://github.com/martinmqz/material-ui-components/issues"
+    "url": "https://github.com/martinmqz/material-ui-showcase/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/martinmqz/material-ui-components.git"
+    "url": "git+https://github.com/martinmqz/material-ui-showcase.git"
   },
   "license": "MIT",
   "author": "martinmqz",
   "type": "module",
-  "main": "./src/main.jsx",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "tsc -b && vite build",
     "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -32,12 +32,11 @@
     "@emotion/styled": "^11.14.1",
     "@mui/icons-material": "^7.2.0",
     "@mui/material": "^7.2.0",
-    "@tailwindcss/vite": "^4.1.11",
-    "framer-motion": "^12.23.11",
+    "@tanstack/react-query": "^5.83.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-scripts": "^5.0.0",
-    "tailwindcss": "^4.1.11"
+    "react-router-dom": "^7.7.1",
+    "zustand": "^5.0.6"
   },
   "devDependencies": {
     "@eslint/js": "^9.30.1",
@@ -48,6 +47,8 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.3.0",
+    "typescript": "~5.8.3",
+    "typescript-eslint": "^8.35.1",
     "vite": "^7.0.4"
   }
 }
