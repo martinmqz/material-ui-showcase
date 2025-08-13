@@ -1,6 +1,8 @@
 # 🌟 Material UI Showcase
 
-A simple demo showcasing core Material UI components in **React** **TypeScript** — bundled with **Vite**.
+A curated showcase of Material UI components built with **React** and **TypeScript** designed for fast copy/paste integration and onboarding-friendly usage.
+[<img width="500"  alt="image" src="https://github.com/user-attachments/assets/26d13b9f-4842-4637-bcc1-90fac4edcc10" />](https://martinmqz.github.io/material-ui-showcase?github)
+
 
 ## 🚀 Live Demo
 
